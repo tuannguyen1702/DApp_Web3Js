@@ -1,0 +1,87 @@
+.form-select select {
+
+    &:after{
+        content: "\f107";
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+
+    width: 100%;
+    background: #fff url('../images/dropdown-icon.png') no-repeat;
+    background-size: 22px;
+    background-position:  right 10px center;
+    font-family: 'Arial';
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    option {
+        padding: 10px;
+    }
+}
+select.form-control:not([size]):not([multiple]) {
+    height: auto;
+}
+
+// .icon{
+//     display: none;
+// }
+.vi-mobile
+{
+    .icon:after{
+        content: "+84";
+        position: absolute;
+        left: 45px;
+        font-family: "Proxima-nova", 'Noto Sans', sans-serif;
+        font-size: 17px;
+        margin-top: -2px;
+        color: $darkTextColor;
+    }
+
+    input, select{
+        padding-left: 80px;
+    }
+}
+.gender-icon .icon:before {
+    content: "\f224";
+    font-size: 15px;
+}
+
+.mobile-icon .icon:before {
+    content: "\f10b";
+    margin-top: -3px;
+    display: inline-block;
+    font-size: 21px;
+}
+
+.email-icon .icon:before {
+    content: "\f003";
+}
+.bank-icon .icon:before {
+    content: "\f19c";
+}
+
+.user-icon .icon:before {
+    content: "\f2c0";
+}
+
+.card-icon .icon:before {
+    content: "\f09d";
+}
+
+.img-icon:before{
+    content: "\f1c5";
+}
+
+.fa-custom:before, .fa-custom:after{
+    font-family: FontAwesome;
+}
+
+.ico-btn-left:before{
+    margin-right: 10px;
+}
+
+.dropdown-toggle::after{
+    margin-left: 8px;
+}
+    
+
+   

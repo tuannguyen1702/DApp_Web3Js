@@ -1,0 +1,32 @@
+.date-picker
+{
+    .react-datepicker__input-container:before{
+        width: 36px;
+        height: 15px;
+        position: absolute;
+        text-align: center;
+        margin-top: ($paddingControl + 3);
+        margin-left: 3px;
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\F073";
+        border-right: 1px solid #a0a0a0;
+        color: #878787;
+        pointer-events: none;
+    }
+
+    input{
+        padding-left: 48px;
+    }
+
+    &.full-width{
+        .react-datepicker__input-container, .react-datepicker-wrapper, input
+        {
+            width: 100%;
+        }
+    }
+
+    .react-datepicker__navigation{
+        background-color: transparent;
+    }
+}
+

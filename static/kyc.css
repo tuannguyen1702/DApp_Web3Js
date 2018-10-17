@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  background: #2f2f2f;
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #eaeaea;
+}
+
+.help-button, .step.active{
+  color: #eaeaea !important;
+}
+
+select {
+  height: 38px;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+}
+.logo img {
+  width: 300px;
+  margin-right: 0;
+  display: inline-block;
+  float: none;
+}
+
+.bubble{
+  background: #7d7d7d;
+}
+
+.form-group>input, .form-group>select {
+  margin-left: 10px;
+  width: 70%;
+  display: block;
+  /* width: 100%; */
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #585858;
+  background-color: #e4e4e4;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #e4e4e4;
+  border-radius: 0.25rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15;
+}
+
+.btn-info, .button.green, button.green {
+  background-color: #0eacf4;
+  border-color: #0eacf4;
+  
+}
+
+.btn-info:hover, .button.green:hover, button.green:hover,
+.btn-info:active, .button.green:active, button.green:active {
+  background-color: #31bfff;
+  border-color: #31bfff;
+
+  
+}
+
+a {
+  color: #0eacf4;
+}
+
+hr {
+  margin: 20px 0 28px;
+}

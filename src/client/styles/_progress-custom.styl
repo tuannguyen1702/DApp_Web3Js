@@ -1,0 +1,280 @@
+// local variables
+$blueColor = #0EACF4
+$darkGreyColor =  #3E3E3E
+$lightGreyColor = #909090
+$orangeColor = #CA8959
+$textColor = #D8D8D8
+
+.progress
+  label
+    content ''
+    display inline-block
+    font-size 0
+    line-height 14px
+    position absolute
+    left 0
+    top 50%
+    transform translate(-50%, -50%)
+    margin 0
+    padding 0
+    width calc(14px + 16px * 2)
+    height calc(14px + 16px * 2)
+    background-color rgba(#000, 0.26)
+    border-radius 100%
+
+.triangle-bottom
+  content ''
+  display inline-block
+  width 0
+  height 0
+  border-style solid
+  border-width 15px 7px 0 7px
+  border-color #2F2F2F transparent transparent transparent
+  position absolute
+  bottom -7px
+  left 50%
+  transform translateX(-50%)
+
+.widget-progress
+  position relative
+  // icon + small heading
+  .logo-coin
+    display inline-block
+    width 25px
+    height 25px
+    position relative
+    top 6px
+    margin-right 10px
+    border-radius 100%
+    background-color $darkGreyColor
+    img
+      position absolute
+      display inline-block
+      width 10px
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+  h3
+    font-family "Proxima-nova"
+    font-weight bold
+    font-size 20px
+    margin-bottom 60px
+
+  // override progress bar
+  .progress
+    height 7px
+    border-radius 22.5px
+    position relative
+    overflow visible
+    margin 10px 0
+    background-color $textColor
+    &-bar
+      height 8px
+      border-radius 3px 4px 4px 4px
+      background $darkGreyColor
+  .top_popup
+    display inline-block
+    position absolute
+    bottom 80px
+    left 0
+    transform translateX(-50%)
+    border-radius 3px
+    padding 0 10px
+    line-height 30px
+    background #2F2F2F
+    font-family $ProximaFont
+    font-weight $boldWeight
+    font-size 14px
+    white-space nowrap
+    z-index 9
+    min-width 90px
+    text-align center
+    &:after
+      @extend .triangle-bottom
+
+  label
+    @extend .progress label
+    &:before
+      @extend .progress label
+      width calc(14px + 8px * 2)
+      height calc(14px + 8px * 2)
+      background rgba(#959595, 0.5)
+      left 50%
+    &:after
+      @extend .progress label
+      width 14px
+      height 14px
+      background #EAEAEA
+      left 50%
+
+  .total-token__label
+    text-align right
+    font-family $ProximaFont
+    font-weight $normalWeight
+    font-size 14px
+    line-height 18px
+    color $textColor
+  .total-token__number
+    text-align right
+    font-family $ProximaFont
+    font-weight $boldWeight
+    font-size 24px
+    line-height 28px
+    color $textColor
+
+
+  &__blue
+    .progress-bar
+      background linear-gradient(90deg, #0EACF4 0%, #81D7FE 88%, #90DCFF 100%)
+    .logo-coin
+      background-color $blueColor
+    .top_popup
+      background-color $blueColor
+      &:after
+        border-top-color $blueColor
+    label
+      background rgba(#8BE6FF, 0.16)
+      &:before
+        background rgba(#0EACF4, 0.6)
+
+  &__orange
+    .progress-bar
+      background linear-gradient(90deg, #CA8959 0%, #DAA57E 100%)
+    .logo-coin
+      background-color $orangeColor
+    .top_popup
+      background-color $orangeColor
+      &:after
+        border-top-color $orangeColor
+    label
+      background rgba(#AE503A, 0.26)
+      &:before
+        background rgba(#CA8959, 0.6)
+
+  &__light-grey
+    .progress-bar
+      background linear-gradient(90deg, #909090 0%, #A4A4A4 100%)
+    .logo-coin
+      background-color $lightGreyColor
+    .top_popup
+      background-color $lightGreyColor
+      &:after
+        border-top-color $lightGreyColor
+    label
+      background rgba(#3C3C3C, 0.26)
+      &:before
+        background rgba(#8C8C8C, 0.6)
+
+
+  &--big
+    margin 80px 0 20px
+    .progress, .progress-bar
+      height 40px
+      border-radius 3px
+    .progress
+      background #3A3A3A
+    .top_popup
+      background #0EACF4
+      font-size 20px
+      line-height 22px
+      font-weight $boldWeight
+      padding: 12px 20px;
+      bottom auto
+      top -80px
+      &:after
+        border-top-color #0EACF4
+    
+    .labels
+      list-style none
+      padding 0
+      display flex
+      justify-content space-between
+      .label-item
+        padding-left 40px
+        padding-bottom 20px
+        line-height 31px
+        font-size 16px
+        vertical-align middle
+        color #fff
+        position relative
+        display inline-block
+        .square
+          font-size 0
+          width 31px
+          height 31px
+          content ''
+          display inline-block
+          border-radius 5px
+          position absolute
+          left 0
+        .number
+          font-weight $boldWeight
+          min-width 60px
+          padding-right 30px
+
+      li:first-child .square
+        background linear-gradient(90deg, #0EACF4 0%, #4E97B8 100%)
+      li:nth-child(2)
+        padding-right 40px
+        padding-left 0
+        .square
+          background #3A3A3A
+          right 0
+          left auto
+
+
+
+
+
+// seperator - outside
+.widget-progress + hr
+  background #303030
+  margin-bottom 20px
+  border-top 0
+  height 1px
+
+.progress-custom {
+  height: 45px;
+  background-color: transparent;
+  border-radius: 60px;
+  
+  .progress-bar:last-child{
+    border-bottom-right-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+}
+
+.progress-bar-1, .label-note-1 {
+    color: #e6e6e6;
+    background-color: #CA8959;
+}
+.progress-bar-2, .label-note-2 {
+    color: #e6e6e6;
+    background-color: #7B7B7B;
+}
+.progress-bar-3, .label-note-3 {
+    color: #e6e6e6;
+    background-color: #0EACF4;
+}
+.progress-bar-4, .label-note-4 {
+    color: #fff;
+    background-color: #ECC876;
+}
+.progress-bar-5, .label-note-5 {
+    color: #CA8959;
+    background-color: #FFFFFF;
+}
+.sold-block{
+  position: relative;
+
+  .sold-line {
+    min-width: 30%;
+    height: 5px
+    border: 1px solid $primaryColor;
+    border-bottom: none;
+    margin-bottom: 8px;
+  }
+}
+
+
+

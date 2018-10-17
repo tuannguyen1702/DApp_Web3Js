@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Clock Icon Hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-505.000000, -267.000000)">
+        <g id="Clock-Icon-Hover" transform="translate(505.000000, 267.000000)" fill="#1E56A0" fill-rule="nonzero">
+            <path d="M9,1.6 C13.08,1.6 16.4,4.92 16.4,9 C16.4,13.08 13.08,16.4 9,16.4 C4.92,16.4 1.6,13.08 1.6,9 C1.6,4.92 4.92,1.6 9,1.6 Z M9,0 C4.02,0 0,4.02 0,9 C0,13.98 4.02,18 9,18 C13.98,18 18,13.98 18,9 C18,4.02 13.98,0 9,0 Z" id="Shape"></path>
+            <path d="M12.46,8.8 L9.38,8.8 L9.38,5.32 C9.38,4.88 9.02,4.52 8.58,4.52 C8.14,4.52 7.78,4.88 7.78,5.32 L7.78,9.2 C7.78,9.28 7.8,9.34 7.8,9.4 C7.78,9.46 7.78,9.54 7.78,9.6 C7.78,10.04 8.14,10.4 8.58,10.4 L12.46,10.4 C12.9,10.4 13.26,10.04 13.26,9.6 C13.26,9.16 12.9,8.8 12.46,8.8 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

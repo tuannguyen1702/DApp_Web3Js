@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="DeApp---Guest---Check-Mozo-Address---Stats" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-957.000000, -775.000000)">
+        <g id="Correct---Wrong-Address" transform="translate(310.000000, 765.000000)" fill="#DD4C4C">
+            <g id="Correct-Sign" transform="translate(647.000000, 10.000000)">
+                <path d="M12.5,0 C15.9505375,0 18.8964719,1.22069062 21.3378906,3.66210938 C23.7793094,6.10352812 25,9.0494625 25,12.5 C25,15.9505375 23.7793094,18.8964719 21.3378906,21.3378906 C18.8964719,23.7793091 15.9505375,25 12.5,25 C9.0494625,25 6.10352813,23.7793091 3.66210938,21.3378906 C1.22069094,18.8964719 2.91433544e-16,15.9505375 2.91433544e-16,12.5 C2.91433544e-16,9.0494625 1.22069094,6.10352812 3.66210938,3.66210938 C6.10352813,1.22069062 9.0494625,0 12.5,0 Z M7.81011061,8.70460801 L11.5083417,12.4028391 L7.35939628,16.5517844 L8.44821557,17.6406037 L12.5971609,13.4916583 L16.295392,17.1898894 L17.3040805,16.1812008 L13.6058495,12.4829698 L17.6406037,8.44821557 L16.5517844,7.35939628 L12.5170302,11.3941505 L8.81879917,7.69591946 L7.81011061,8.70460801 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

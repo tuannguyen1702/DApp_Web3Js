@@ -1,0 +1,240 @@
+.label-unit-container{
+    text-align: center;
+    z-index: 0;
+    width: 100%;
+}
+
+
+.flipClock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    .flipContainer{
+        margin-left: 12px;
+    }
+
+    .flipContainer:first-child{
+            margin-left: 0;
+    }
+
+    &.lbl-bottom {
+        .label-unit-container{
+            position: absolute;
+            bottom: 0;
+        }
+
+        .flipContainer{
+            padding-bottom: 30px;
+            position: relative;
+        }
+
+    }
+}
+
+.flipUnitContainer {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 70px;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-box-shadow:  0px 13px 10px -9px rgba(0, 0, 0, 0.68);
+          box-shadow:  0px 13px 10px -9px rgba(0, 0, 0, 0.68);
+          &:before {
+              content: "";
+                width: 100%;
+                height: 0;
+                position: absolute;
+                z-index: 9;
+                top: 50%;
+                left: 0;
+                /* background-color: #d8d8d8f5; */
+                border-bottom: 1px solid rgba(226, 226, 226, 0.55);
+                border-top: 1px solid rgba(0, 0, 0, 0.16);
+                box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3);
+            }
+}
+
+.upperCard, .lowerCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.upperCard span, .lowerCard span {
+  font-size: 36px;
+  font-weight: 900;
+  color: #333333;
+}
+
+.upperCard {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-image: linear-gradient(-180deg, #F6F6F6 0%, #E2E2E2 100%);
+}
+.upperCard span {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.lowerCard {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-image: linear-gradient(-180deg, #E2E2E2 0%, #CECECE 100%);
+}
+.lowerCard span {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.flipCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.flipCard span {
+  font-size: 36px;
+  font-weight: 900;
+  color: #333333;
+}
+.flipCard.unfold {
+  top: 50%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  background-color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-image: linear-gradient(-180deg, #E2E2E2 0%, #CECECE 100%);
+}
+.flipCard.unfold span {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.flipCard.fold {
+  top: 0%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-image: linear-gradient(-180deg, #E2E2E2 0%, #CECECE 100%);
+}
+.flipCard.fold span {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.fold {
+  -webkit-animation: fold 0.5s 0.5s linear both;
+          animation: fold 0.5s 0.5s linear both;
+}
+
+.unfold {
+  -webkit-animation: unfold 0.5s 0.5s linear both;
+          animation: unfold 0.5s 0.5s linear both;
+}
+
+@media (min-width: 768px){
+  .flipUnitContainer {
+    width: 53px;
+  }
+}
+
+
+@-webkit-keyframes fold {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    background-image: linear-gradient(-180deg, #F6F6F6 0%, #E2E2E2 100%);
+  }
+  50% {
+    background-image: linear-gradient(-180deg, #E2E2E2 0%, #CECECE 100%);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@keyframes fold {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+             background-image: linear-gradient(-180deg, #F6F6F6 0%, #E2E2E2 100%);
+  }
+  50% {
+    background-image: linear-gradient(-180deg, #E2E2E2 0%, #CECECE 100%);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+            
+  }
+}
+@-webkit-keyframes unfold {
+  0% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+            background-image: linear-gradient(-180deg, #F6F6F6 0%, #E2E2E2 100%);
+  }
+  50% {
+    background-image: linear-gradient(-180deg, #E2E2E2 0%, #CECECE 100%);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+@keyframes unfold {
+  0% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  50% {
+    background-image: linear-gradient(-180deg, #E2E2E2 0%, #CECECE 100%);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}

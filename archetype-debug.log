@@ -1,0 +1,322 @@
+2018-08-24T04:43:20.458Z - info: No custom webpack config webpack.config.dev.js found in dirs CWD; CWD/archetype/config/webpack
+2018-08-24T04:43:20.471Z - info: Entry point configuration /PROJECTS/BigLab/Mozo/DApp/client/src/client/entry.config.js is not found, using default entry point...
+2018-08-24T04:43:21.446Z - info: PWA enabled with config from /PROJECTS/BigLab/Mozo/DApp/client/config/sw-config.js
+2018-08-24T04:43:21.680Z - info: Not disabling NodeSourcePlugin.  NODE_ENV: 'development'
+2018-08-24T04:43:21.680Z - verbose: Final Webpack config {
+  "cache": true,
+  "plugins": [
+    {
+      "options": {
+        "options": {
+          "debug": false
+        },
+        "test": {}
+      },
+      "__name": "LoaderOptionsPlugin"
+    },
+    {
+      "filename": "[name].style.[hash].css",
+      "id": 1,
+      "options": {},
+      "__name": "ExtractTextPlugin"
+    },
+    {
+      "options": {
+        "size": 4000,
+        "preserve": true,
+        "defer": true
+      },
+      "__name": "CSSSplitWebpackPlugin"
+    },
+    {
+      "options": {
+        "options": {
+          "context": "/PROJECTS/BigLab/Mozo/DApp/client/src",
+          "stylus": {
+            "use": [
+              null
+            ]
+          }
+        },
+        "test": {}
+      },
+      "__name": "LoaderOptionsPlugin"
+    },
+    {
+      "opts": {
+        "filename": "../server/stats.json",
+        "fields": [
+          "assetsByChunkName",
+          "assets"
+        ]
+      },
+      "__name": "StatsWriterPlugin"
+    },
+    {
+      "config": {
+        "valid": false
+      },
+      "options": {
+        "assetsFile": "../isomorphic-assets.json",
+        "webpackDev": {
+          "url": "http://localhost:2992",
+          "addUrl": false
+        }
+      },
+      "__name": "IsomorphicLoaderPlugin"
+    },
+    {
+      "options": {
+        "prefix": "icons-[hash]/",
+        "emitStats": true,
+        "statsFilename": "../server/iconstats.json",
+        "persistentCache": true,
+        "inject": false,
+        "background": "#FFFFFF",
+        "logo": "/PROJECTS/BigLab/Mozo/DApp/client/src/client/images/electrode.png",
+        "title": "Mozo ICO",
+        "icons": {
+          "android": true,
+          "appleIcon": true,
+          "appleStartup": true,
+          "coast": false,
+          "favicons": true,
+          "firefox": true,
+          "opengraph": false,
+          "twitter": false,
+          "yandex": false,
+          "windows": false
+        }
+      },
+      "__name": "FaviconsWebpackPlugin"
+    },
+    {
+      "fields": {
+        "short_name": "PWA",
+        "theme_color": "#FFFFFF"
+      },
+      "regex": {},
+      "__name": "AddManifestFieldsPlugin"
+    },
+    {
+      "config": {},
+      "options": {
+        "cacheId": "Mozo ICO",
+        "filename": "service-worker.js",
+        "importScripts": [],
+        "staticFileGlobsIgnorePatterns": [],
+        "mergeStaticsConfig": false,
+        "minify": false,
+        "staticFileGlobs": [
+          "dist/**/*"
+        ],
+        "stripPrefix": "dist/js/",
+        "filepath": "dist/sw.js",
+        "maximumFileSizeToCacheInBytes": 4194304,
+        "skipWaiting": false,
+        "noWarning": true,
+        "runtimeCaching": [
+          {
+            "handler": "fastest",
+            "urlPattern": {}
+          }
+        ]
+      },
+      "overrides": {},
+      "warnings": [],
+      "__name": "SWPrecacheWebpackPlugin"
+    },
+    {
+      "opts": {
+        "files": [
+          {
+            "asset": {},
+            "output": {
+              "filename": "stats.json"
+            }
+          }
+        ],
+        "output": {
+          "path": "/PROJECTS/BigLab/Mozo/DApp/client/.etmp"
+        }
+      },
+      "__name": "DiskPlugin"
+    },
+    {
+      "definitions": {
+        "process.env.NODE_ENV": "\"development\""
+      },
+      "__name": "DefinePlugin"
+    },
+    {
+      "sourceMappingURLComment": "\n//# sourceMappingURL=[url]",
+      "moduleFilenameTemplate": "webpack:///[resourcePath]",
+      "fallbackModuleFilenameTemplate": "webpack:///[resourcePath]?[hash]",
+      "options": {
+        "sourceMapFilename": "[file].map"
+      },
+      "__name": "SourceMapDevToolPlugin"
+    },
+    {
+      "filename": "[name].style.css",
+      "id": 2,
+      "options": {},
+      "__name": "ExtractTextPlugin"
+    },
+    {
+      "__name": "NoEmitOnErrorsPlugin"
+    }
+  ],
+  "context": "/PROJECTS/BigLab/Mozo/DApp/client/src/client",
+  "entry": "./app.jsx",
+  "output": {
+    "path": "/PROJECTS/BigLab/Mozo/DApp/client/dist/js",
+    "pathinfo": false,
+    "publicPath": "http://localhost:2992/js/",
+    "chunkFilename": "[hash].[name].js",
+    "filename": "[name].bundle.dev.js"
+  },
+  "resolve": {
+    "alias": {},
+    "plugins": [
+      {
+        "source": "module",
+        "path": "node_modules",
+        "target": "resolve"
+      }
+    ],
+    "modules": [
+      "/PROJECTS/BigLab/Mozo/DApp/client/src",
+      "/PROJECTS/BigLab/Mozo/DApp/client",
+      "node_modules"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".json"
+    ]
+  },
+  "resolveLoader": {
+    "modules": [
+      "/PROJECTS/BigLab/Mozo/DApp/client/lib",
+      "/PROJECTS/BigLab/Mozo/DApp/client"
+    ],
+    "plugins": [
+      {
+        "source": "module",
+        "path": "node_modules",
+        "target": "resolve"
+      }
+    ]
+  },
+  "module": {
+    "rules": [
+      {
+        "test": {},
+        "exclude": {},
+        "use": [
+          {
+            "loader": "babel-loader"
+          }
+        ]
+      },
+      {
+        "test": {},
+        "loader": [
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/extract-text-webpack-plugin/dist/loader.js",
+            "options": {
+              "omit": 1,
+              "remove": true,
+              "publicPath": ""
+            }
+          },
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/style-loader/index.js"
+          },
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer"
+          },
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/postcss-loader/index.js"
+          }
+        ]
+      },
+      {
+        "test": {},
+        "use": [
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/extract-text-webpack-plugin/dist/loader.js",
+            "options": {
+              "omit": 1,
+              "remove": true,
+              "publicPath": ""
+            }
+          },
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/style-loader/index.js"
+          },
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/css-loader/index.js?-autoprefixer"
+          },
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/stylus-relative-loader/index.js"
+          }
+        ]
+      },
+      {
+        "test": {},
+        "use": [
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/url-loader/index.js",
+            "options": {
+              "limit": 1000,
+              "mimetype": "application/font-woff"
+            }
+          },
+          "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/isomorphic-loader/index.js"
+        ]
+      },
+      {
+        "test": {},
+        "use": [
+          "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/file-loader/index.js",
+          "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/isomorphic-loader/index.js"
+        ]
+      },
+      {
+        "test": {},
+        "use": [
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/electrode-cdn-file-loader/index.js",
+            "options": {
+              "limit": 10000
+            }
+          },
+          "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/isomorphic-loader/index.js"
+        ]
+      },
+      {
+        "test": {},
+        "use": [
+          {
+            "loader": "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/file-loader/index.js",
+            "options": {
+              "name": "manifest.json"
+            }
+          },
+          "/PROJECTS/BigLab/Mozo/DApp/client/node_modules/web-app-manifest-loader/index.js"
+        ]
+      }
+    ]
+  },
+  "devServer": {
+    "https": false,
+    "disableHostCheck": true,
+    "headers": {
+      "Access-Control-Allow-Origin": "*"
+    }
+  }
+}
+2018-08-24T04:44:09.153Z - info: APP_SRC_DIR set to src/
+2018-08-24T04:44:09.155Z - info: OptimizeModulesForProduction - skipping since NODE_ENV !== "production"

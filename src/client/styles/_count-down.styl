@@ -1,0 +1,86 @@
+.Countdown {
+    &--wrapper {
+        color: #D5D5D5;
+        font-family: "Proxima-nova";
+    }
+    color: #D5D5D5;
+    &:before, &:after {
+        display: table;
+        content: '';
+        clear: both;
+    }
+
+    .heading {
+        font-size: 20px;
+        font-weight: 400;
+        strong {
+            font-weight: 600;
+        }
+    }
+
+}
+.Countdown-col {
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    font-weight: 400;
+    strong {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 56px;
+    }
+    .Countdown &:first-child {
+        padding-left: 0;
+    }
+    .Countdown &:last-child {
+        padding-right: 0;
+    }
+}
+
+[data-lang="zh-hk"] {
+    .Countdown--wrapper {
+        font-family: inherit;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 767px) {
+    .Countdown .heading {
+        font-size: 16px;
+    }
+    .Countdown-col {
+        min-width: 50px;
+        display: inline-block;
+        float: none;
+        padding: 0 15px 15px;
+        strong {
+            font-size: 45px;
+        }
+    }
+
+    .guest-page .content {
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+}
+
+.mozo-coin-container {
+    max-width: 726px;
+    margin: 0 auto;
+
+    .mozo-coin-main-container{
+        width: 100%;
+        padding-top: 37%;
+        position: relative;
+
+        .mozo-coin{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: url('../images/count-down-mozo-coin.png') center top no-repeat; 
+            background-size: contain;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+
+.image-upload{
+    height: 200px;
+    border: 1px dashed #979797;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    padding: 0 !important;
+    background:#ececec;
+
+    img {
+        max-height: calc(100% - 2px);
+    }
+
+    .description{
+        transform: translate3d(50%, -50%, 0);
+        top: 50%;
+        position: absolute;
+        right: 50%;
+
+        &.img-icon:before{
+            font-size: 50px;
+            font-family: FontAwesome;
+            margin-bottom: 5px;
+            color: #bebebe;
+        }
+
+        span{
+            display: block;
+            font-size: 13px;
+            color:#a9a9a9;
+        }
+    }
+}
+.loading-container {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(84, 84, 84, 0.37);
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+.dropzone{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

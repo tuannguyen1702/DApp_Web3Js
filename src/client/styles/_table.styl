@@ -1,0 +1,124 @@
+.table thead th
+{
+    border-bottom: 1px;
+    border-top: 0;
+    vertical-align: middle;
+    padding: 0 8px 20px 8px;
+
+    &:first-child{
+        padding-left: 0;
+    }
+}
+.table td, .table th
+{
+    border-color: $borderColor;
+}
+.table td{
+    padding: 20px 8px;
+    vertical-align: middle;
+
+    &:first-child{
+        padding-left: 0;
+    }
+    &:last-child{
+        width: 90px;
+        position: relative;
+    }
+}
+
+.has-button-hide {
+
+    .float-active-container{
+        position: absolute;
+        top: 0;
+        padding: 12px 0;
+        right: 0;
+        display: none;
+    }
+
+    tr:hover{
+        .float-active-container{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 1360px)
+{
+    .table td, .table th
+    {
+        .address{
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+        }
+    }
+}
+
+.mobile-tbl
+{
+    .mobile-lbl {
+        display: none;
+    }
+    @media (max-width: 991px)
+    {
+        max-width: 360px;
+        
+        thead {
+            display: none;
+        }
+
+        td {
+            display: block;
+            text-align: right;
+            border: none;
+            border-left: 1px solid #c8c8c8;
+            border-right: 1px solid #c8c8c8;
+            position: relative;
+            padding: 8px 15px;
+
+            &:first-child{
+                border-top: 1px solid #c8c8c8;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                padding-top: 15px;
+            }
+            &:last-child{
+                border-bottom: 1px solid #c8c8c8;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+                width: 100%;
+            }
+
+            .mobile-lbl{
+                position: absolute;
+                left: 15px;
+                color: #1b1b1b;
+                font-weight: 600;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.table-body-scroll {
+  
+    tbody {
+        display:block;
+        max-height:500px;
+        overflow-y:auto;
+    }
+    thead, tbody tr {
+        display:table;
+        width:100%;
+        table-layout:fixed;
+    }
+
+    &table {
+        width:100%;
+    }
+}
+

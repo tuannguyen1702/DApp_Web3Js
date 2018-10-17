@@ -1,0 +1,198 @@
+.react-redux-modal .rrm-holder .rrm-shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.react-redux-modal .rrm-holder .scroll .rrm-content{
+    background-color: $popupBgColor;
+    color: $popupTextColor
+    margin-top: 100px;
+
+    .sub-title{
+        color: #585858;
+    }
+
+    .form-control{
+        background-color: #dedede;
+        border: 1px solid #dedede;
+    }
+}
+
+.rrm-title{
+    border-bottom-color: #d0d0d0;
+} 
+.rrm-title{
+    border-top-color: #d0d0d0;
+}
+
+.react-redux-modal .rrm-holder .scroll .rrm-content .rrm-title .rr-title-actions button{
+    text-indent: -3000px;
+    border: 0;
+
+    &:hover {
+        background: none;
+        border: 0;
+        box-shadow: none;
+    }
+
+    &:before{
+        content: "×";
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        text-indent: 0;
+        position: absolute;
+        right: 15px;
+        top: 7px;
+    }
+}
+
+.react-redux-modal .rrm-holder{
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+     -webkit-animation: holder-key-frame .15s; /* Safari 4.0 - 8.0 */
+    animation: holder-key-frame;
+}
+
+.react-redux-modal .rrm-holder .scroll .rrm-content{
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    //  -webkit-animation: content-key-frame; /* Safari 4.0 - 8.0 */
+    // animation: content-key-frame;
+
+      -webkit-animation: content-key-frame 0.7s; /* Safari 4.0 - 8.0 */
+    animation: content-key-frame  0.7s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes content-key-frame {
+    0%   { 
+        opacity: 0;
+        -webkit-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+    }
+    100% {    
+        opacity: 1;
+        -webkit-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+
+@keyframes content-key-frame {
+    0%   { 
+        opacity: 0;
+        -webkit-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+    }
+    100% {    
+        opacity: 1;
+        -webkit-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes holder-key-frame {
+    0%   { opacity: 0;}
+    100% {opacity: 0.15;}
+}
+
+@keyframes holder-key-frame {
+    0%   { opacity: 0;}
+    100% {opacity: 0.15;}
+}
+
+.toast-content{
+    padding : 10px;
+
+    a, a:hover {
+        color: #fff;
+    }
+}
+
+.bottom-info{
+    bottom: 0;
+    width: auto;
+    padding: 20px;
+}
+
+.top-info{
+    top: 80px;
+    text-align: center;
+}
+
+
+
+.bottom-right-content {
+    background-color: #fff;
+    color: #585858;
+    padding: 15px 10px 16px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    &__header {
+        text-align: right;
+        > span:first-child {
+            font-weight: 600;
+            color: #DD4C4C;
+            font-size: 13px;
+            text-align: left;
+            display: none;
+        }
+        .svg-icon-container .svg-icon {
+            width: 15px;
+            height: 10px;
+            top: 3px;
+            left: 5px;
+            svg {
+                fill: #585858;
+            }
+        }
+        .svg-icon-container .svg-icon {
+            transform: rotate(-180deg);
+        }
+        &.hidden  {
+            > span:first-child {
+                display: block;
+                position: absolute;
+                margin-top: 2px;
+            }
+            .svg-icon-container .svg-icon {
+                transform: none;
+            }
+        }
+    }
+    &__content {
+        padding-top: 5px;
+        &:before, &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+    &-icon {
+        float: left;
+        width: 80px;
+        height: 80px;
+    }
+    &__content-right {
+        width: calc(100% - 100px);
+        float: left;
+        padding-left: 20px;
+        h5 {
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 600;
+        }
+        .info-text {
+            font-weight: 600;
+        }
+    }
+}
+

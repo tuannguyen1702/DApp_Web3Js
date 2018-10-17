@@ -1,0 +1,82 @@
+.ticket
+  display: flex
+  flex-direction: row
+  font-family: $ProximaFont
+  font-size: 16px
+  padding: 30px 40px
+  background-color: $sideBarBgColor
+  border-radius: 5px
+
+  &-no-bgColor
+    background-color: transparent
+    border-radius: 0
+    padding: 30px 0
+
+  &__title
+    flex-grow: 2
+    font-weight: $boldWeight
+    color: #FFFFFF
+    font-size: 16px
+    margin: 0
+    &.large
+      font-size: 30px
+    a
+      color: inherit
+      cursor: pointer
+
+  &__time, &__status
+    min-width: 100px
+    padding-top: 5px
+
+  &__time
+    text-align: center
+
+  &__status
+    font-weight: $boldWeight
+    text-align: right
+    &-pending
+      color: $dangerTextColor
+    &-closed
+      color: $successTextColor
+
+.btn-create-support
+  background-color: $infoColor
+  border: 0
+  color: #FFFFFF
+  &:hover
+    background-color: $infoColor
+    box-shadow: none
+
+//== LIST OF TICKETS
+.list-ticket
+  list-style: none
+  padding: 0
+  margin: 0
+  .item-ticket
+    margin-bottom: 20px
+
+// STYLING IN TICKET DETAIL PAGE
+.comment
+  color: #FFFFFF
+  font-size: 16px
+  font-family $ProximaFont
+  font-weight $normalWeight
+  padding: 50px 50px 40px
+  border-radius: 5px
+  margin-bottom: 20px
+
+  &_author
+    font-weight: $boldWeight
+  p:last-child
+    margin-bottom: 0
+  &-info
+    color: $primaryColor
+
+.comments
+  list-style: none
+  padding: 0;
+  margin: 0
+  .comment:nth-child(2n+1)
+    background-color: #191919
+  .comment:nth-child(2n+2)
+    background-color: #2A2A2A

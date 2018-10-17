@@ -1,0 +1,132 @@
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft
+}
+
+.animated3 {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+.fail-icon {
+    content: url('../images/icons/check-fail.svg')
+    height: 15px;
+    position: relative;
+    top: 3px;
+}
+
+.success-icon {
+    content: url('../images/icons/check-success.svg')
+    height: 15px;
+    position: relative;
+    top: 3px;
+}
+
+.send-money {
+    content: url('../images/icons/send-money.svg')
+    height: 24px;
+    position: relative;
+    top: 3px;
+}
+
+.receive-money {
+    content: url('../images/icons/receive-money.svg')
+    height: 24px;
+    position: relative;
+    top: 3px;
+}
+
+.convert-icon {
+    content: url('../images/icons/convert-img.png')
+    height: 32px;
+    position: relative;
+    top: 18px;
+}
+
+.svg-icon-container{
+    position: relative;
+    padding-left: 25px;
+    min-height: 25px;
+
+    .svg-icon {
+        width: 20px;
+        height: 18px;
+        display: inline-block;
+        margin-top: 1px;
+        position: absolute;
+        left: -3px;
+
+        &.icon-lg {
+            width: 30px;
+            height: 30px;
+        }
+
+        &.icon-circle {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            padding: 3px;
+            background-color: #696969;
+
+            &.primary {
+                background-color: $primaryColor;
+            }
+
+            svg {
+                padding: 3px;
+            }
+        }
+
+        &.stroke{
+            stroke-width: 1px;
+            stroke: $textColor;
+        }
+
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+            fill: $textColor;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+}
